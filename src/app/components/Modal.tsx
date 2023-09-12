@@ -16,7 +16,6 @@ export default function Modal({ isVisivel, setIsVisivel, projeto }: ModalProps) 
     const [imagemAtual, setImagemAtual] = useState<string>("");
     const numeroAtual = useRef(0);
 
-
     useEffect(() => {
         if (projeto.imagens && imagemAtual == "") {
             setImagemAtual(projeto.imagens[0]);
@@ -52,7 +51,7 @@ export default function Modal({ isVisivel, setIsVisivel, projeto }: ModalProps) 
                         {
                             projeto.imagens &&
                             projeto.imagens.map((projetoAtual, index) => {
-                                return <div onClick={() => { setImagemAtual(projetoAtual); numeroAtual.current = index }} className='rounded-full cursor-pointer bg-purple-500  transition-all hover:bg-white h-5 w-5 z-1000'></div>
+                                return <div key={index} onClick={() => { setImagemAtual(projetoAtual); numeroAtual.current = index }} className='rounded-full cursor-pointer bg-purple-500  transition-all hover:bg-white h-5 w-5 z-1000'></div>
                             })
                         }
                     </div>

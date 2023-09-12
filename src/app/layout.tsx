@@ -16,7 +16,7 @@ export default function RootLayout({
       <html lang="pt-br">
         <body className='min-h-[900px] h-screen flex flex-col'>
           <nav className='px-10 py-4 flex justify-between items-center'>
-            <Link href="/"><h1 className='font-bold text-3xl'>Rafael's <span className='text-purple-500'>Portfolio</span></h1></Link>
+            <Link href="/"><h1 className='font-bold text-3xl'>Rafael&apos;s <span className='text-purple-500'>Portfolio</span></h1></Link>
             <div className='flex gap-3'>
               <Link href="/habilidades" className='hover:underline hover:text-purple-500 duration-300'>Skills</Link>
               <Link href="/projetos" className='hover:underline hover:text-purple-500 duration-300'>Projects</Link>

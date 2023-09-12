@@ -27,7 +27,7 @@ export default function Home() {
 
 
         <p className='mt-10 text-gray-400'>
-          My main area of expertise is front-end development, but I also venture into the world of back-end. I'm enthusiastic about exploring new programming languages and I'm constantly seeking to improve my skills in creating web systems.</p>
+          My main area of expertise is front-end development, but I also venture into the world of back-end. I&apos;m enthusiastic about exploring new programming languages and I&apos;m constantly seeking to improve my skills in creating web systems.</p>
       </div>
 
     </main>
