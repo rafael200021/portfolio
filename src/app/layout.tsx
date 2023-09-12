@@ -5,12 +5,6 @@ import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Rafael's Portfolio",
-};
-
 
 export default function RootLayout({
   children,
