@@ -1,36 +1,60 @@
-import React, { useState } from 'react'
-import { IProjeto, } from '../Interfaces/IProjeto';
-import Badge from './Badge';
-import Image from 'next/image'
+import React, { useState } from "react";
+import { IProjeto } from "../Interfaces/IProjeto";
+import Badge from "./Badge";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface ItemProps {
-    projeto: IProjeto
-    setConteudoModal: React.Dispatch<React.SetStateAction<IProjeto>>,
-    setIsVisivel: React.Dispatch<React.SetStateAction<boolean>>
+  projeto: IProjeto | undefined;
+  setConteudoModal: React.Dispatch<React.SetStateAction<IProjeto | undefined>>;
+  setIsVisivel: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export default function Item({ projeto, setConteudoModal, setIsVisivel }: ItemProps) {
-
-    return (
-        <div className='border rounded-lg gap-2'>
-            <div className='w-full border'>
-                {projeto.imagens &&
-                    <img src={projeto.imagens[0]} alt={projeto.titulo} className='w-full h-64 object-cover ' />
-                }
-            </div>
-            <div className='px-14 py-10 min-h-[400px] flex flex-col justify-between'>
-                <div>
-                    <h2 className='text-lg font-bold text-gray-800'>{projeto.titulo}</h2>
-                    <div className='flex flex-wrap gap-4 mt-2'>
-                        {projeto.linguagens?.map((linguagem, index) => {
-                            return <Badge key={index}>{linguagem}</Badge>
-                        })}
-                    </div>
-                    <p className='text-sm text-gray-500 text-justify mt-4'>{projeto.descricao?.slice(0, 120) + ' ...'}</p>
-                </div>
-                <div className='flex justify-end mt-10'>
-                    <button type='button' className=' text-white w-full bg-purple-500 py-3 px-6 rounded-full font-bold hover:bg-white hover:text-purple-500 border hover:border-purple-500 transition-colors' onClick={() => { setIsVisivel(true); setConteudoModal(projeto) }}>Saiba Mais</button>
-                </div>
-            </div>
+export default function Item({
+  projeto,
+  setConteudoModal,
+  setIsVisivel,
+}: ItemProps) {
+  return (
+    <motion.div initial={{ opacity: 0, y:-100 }} animate={{ opacity: 1,y:0 }} transition={{ duration: 0.5 }} className="max-w-sm mx-auto rounded-xl overflow-hidden bg-white dark:bg-neutral-900 shadow-lg transform hover:scale-105 transition-transform duration-300">
+      {projeto?.imagens && (
+        <div className="h-48 overflow-hidden">
+          <img
+            src={projeto.imagens[0]}
+            alt={projeto.titulo}
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+          />
         </div>
-    )
+      )}
+      <div className="p-6 flex flex-col justify-between max-h-64 h-64 overflow-y-auto  w-full">
+        <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+          {projeto?.titulo}
+        </h2>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {projeto?.linguagens?.map((linguagem, index) => (
+            <span
+              key={index}
+              className="inline-block bg-purple-100 text-purple-600 dark:bg-purple-700 dark:text-purple-200 py-1 px-2 rounded-full text-xs font-semibold"
+            >
+              {linguagem}
+            </span>
+          ))}
+        </div>
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+          {projeto?.descricao?.slice(0, 100) + "..."}
+        </p>
+        <div className="flex justify-end items-center">
+          <button
+            type="button"
+            className="bg-purple-500 text-white py-2 px-4 rounded-lg font-bold hover:bg-purple-400 dark:bg-purple-600 dark:hover:bg-purple-500 transition-colors"
+            onClick={() => {
+              setIsVisivel(true);
+              setConteudoModal(projeto);
+            }}
+          >
+            Ver Projeto
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
 }
