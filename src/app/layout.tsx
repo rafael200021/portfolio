@@ -46,7 +46,7 @@ export default function RootLayout({
                 Rafael&apos;s <span className="text-purple-500">Portfolio</span>
               </h1>
             </Link>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <Toggle value={tema === "dark"} setValue={modificarTema} />
               <LinkMenu rota="/habilidades">Skills</LinkMenu>
               <LinkMenu rota="/projetos">Projects</LinkMenu>

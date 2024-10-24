@@ -41,7 +41,7 @@ export default function Modal({
   return (
     <Dialog
       visible={isVisivel}
-      style={{ width: "80vw", height: "100vh" }}
+      className="lg:w-[80vw] h-[100vh] w-[90vw]"
       onHide={() => setIsVisivel(false)}
       resizable={false}
       draggable={false}

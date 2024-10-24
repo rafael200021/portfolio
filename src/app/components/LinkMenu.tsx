@@ -11,7 +11,7 @@ export default function LinkMenu({
   return (
     <Link
       href={rota}
-      className="hover:font-bold hover:scale-105 text-neutral-900 dark:text-white hover:text-purple-500 duration-300"
+      className="hover:font-bold hover:scale-105 text-neutral-900 dark:text-white hover:text-purple-500 duration-300 lg:text-base text-sm"
     >
       {children}
     </Link>

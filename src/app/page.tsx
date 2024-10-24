@@ -6,13 +6,13 @@ import Lottie from 'lottie-react'
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row justify-center items-center w-full h-full px-20 gap-8 dark:bg-neutral-900">
-      <div className='w-full flex justify-center items-center lg:w-2/4'>
+    <main className="flex flex-col  lg:flex-row justify-center items-center w-full h-full px-20 gap-8 dark:bg-neutral-900">
+      <div className='w-full hidden lg:flex justify-center items-center lg:w-2/4'>
         <div className='rounded-full w-96 h-96 p-10   bg-purple-500'>
           <Lottie animationData={Inicio} loop={true} />
         </div>
       </div>
-      <div className='w-full flex flex-col justify-start items-start lg:w-2/4 pr-0 lg:pr-40'>
+      <div className='w-full flex flex-col py-10 justify-start items-start lg:w-2/4 pr-0 lg:pr-40'>
         <h1 className='text-purple-500 font-bold text-5xl'>
 
           <Typewriter

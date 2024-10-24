@@ -40,7 +40,7 @@ export default function Item({
           ))}
         </div>
         <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          {projeto?.descricao?.slice(0, 100) + "..."}
+          {projeto?.descricao?.slice(0, 80) + "..."}
         </p>
         <div className="flex justify-end items-center">
           <button
@@ -51,7 +51,7 @@ export default function Item({
               setConteudoModal(projeto);
             }}
           >
-            Ver Projeto
+            Open Project
           </button>
         </div>
       </div>

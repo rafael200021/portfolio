@@ -2,15 +2,15 @@ import { IProjeto } from "../Interfaces/IProjeto";
 
 export const projetos: IProjeto[] = [
     {
-      titulo: "Favorite Seu Pet",
+      titulo: "Favorite Your Pet",
       descricao:
-        "This is the frontend of the Favorite Seu Pet application, a simple and intuitive platform where users can favorite their preferred animals, search for them through a search field, and filter animals by category. The goal is to create a seamless experience for people looking to organize and manage their favorites Pets efficiently.",
+        "This is the frontend of the Favorite Your Pet application, a simple and intuitive platform where users can favorite their preferred animals, search for them through a search field, and filter animals by category. The goal is to create a seamless experience for people looking to organize and manage their favorites Pets efficiently.",
       imagens: ["./images/Projeto1/pagina1.png", "images/Projeto1/pagina2.png"],
       linguagens: ["React", "Typescript", "Sass"],
       tipo: "Front-End",
       link: "https://github.com/rafael200021/favorite_seu_pet",
       texto: `
-    <p style="line-height: 1.6;">This is the Favorite Seu Pet application, a simple and intuitive platform where users can favorite their preferred animals, search for them through a search field, and filter animals by category. The goal is to create a seamless experience for people looking to organize and manage their favorites Pets efficiently.</p>
+    <p style="line-height: 1.6;">This is the Favorite Your Pet application, a simple and intuitive platform where users can favorite their preferred animals, search for them through a search field, and filter animals by category. The goal is to create a seamless experience for people looking to organize and manage their favorites Pets efficiently.</p>
     <h2 style="font-weight:bold; font-size:20px; margin-top: 10px;margin-bottom: 10px;">Features</h2>
     <ul style="list-style-type: disc; margin-left: 20px;">
         <li><strong>User-friendly UI:</strong> A clean and modern interface designed for easy navigation and interaction.</li>
@@ -34,7 +34,7 @@ export const projetos: IProjeto[] = [
 `,
     },
     {
-      titulo: "Memorização de Flashcard",
+      titulo: "Memorization Flashcard App",
       descricao:
         "I created this application to help me study languages and improve my React skills. The goal is to make language learning more interactive and efficient while also building a useful project in React.",
       imagens: [
@@ -72,15 +72,15 @@ export const projetos: IProjeto[] = [
 `,
     },
     {
-      titulo: "Memorizacao de FlashCard API",
+      titulo: "Memorization Flashcard API",
       descricao:
-        "This project provides a REST API for the Memorizacao FlashCard App. The API is designed to handle flashcard data and facilitate the memorization process through a structured and scalable backend.",
+        "This project provides a REST API for the Memorization Flashcard App. The API is designed to handle flashcard data and facilitate the memorization process through a structured and scalable backend.",
       imagens: ["./images/Projeto3/pagina1.png"],
       linguagens: ["Node.js", "Express", "Sequelize"],
       tipo: "Back-End",
       link: "https://github.com/rafael200021/memorizacao-flashcard-api",
       texto: `
-    <p style="line-height: 1.6;">This project provides a REST API for the Memorizacao FlashCard App. The API is designed to handle flashcard data and facilitate the memorization process through a structured and scalable backend.</p>
+    <p style="line-height: 1.6;">This project provides a REST API for the Memorization Flashcard App. The API is designed to handle flashcard data and facilitate the memorization process through a structured and scalable backend.</p>
     <h2 style="font-weight:bold; font-size:20px; margin-top: 10px;margin-bottom: 10px;">Features</h2>
     <ul style="list-style-type: disc; margin-left: 20px;">
         <li><strong>RESTful API:</strong> Provides endpoints for creating, reading, updating, and deleting flashcards.</li>

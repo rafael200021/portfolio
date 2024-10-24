@@ -3,22 +3,29 @@ import React from "react";
 import email from "@/app/assets/lotties/email.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
+import Typewriter from 'typewriter-effect';
 
 export default function Contato() {
   return (
     <div className="h-full lg:py-0 py-20 px-32 flex flex-col lg:flex-row gap-8 ">
-      <div className="w-full lg:w-2/4 flex justify-center items-center">
+      <div className="w-full lg:w-2/4 hidden lg:flex justify-center items-center">
         <Lottie animationData={email} loop={true} />
       </div>
       <div className="w-full lg:w-2/4 h-full flex justify-center items-center flex-col gap-4">
         <motion.h1
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-
           transition={{ duration: 0.5 }}
           className="text-purple-500 font-bold text-center text-5xl"
         >
-          Contact me via LinkedIn
+          <Typewriter
+            options={{
+              strings: ["Contact me via LinkedIn"],
+              autoStart: true,
+              delay: 100,
+              loop: true,
+            }}
+          />
         </motion.h1>
         <div className="flex gap-4">
           <motion.a
